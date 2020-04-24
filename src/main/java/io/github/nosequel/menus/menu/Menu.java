@@ -14,7 +14,7 @@ import java.util.List;
 
 @Getter
 @Setter
-public abstract class Menu {
+public class Menu {
 
     private final Player player;
     private final String title;
@@ -67,6 +67,8 @@ public abstract class Menu {
             this.inventory = inventory;
             player.closeInventory();
             player.openInventory(inventory);
+        } else {
+            player.updateInventory();
         }
     }
 
