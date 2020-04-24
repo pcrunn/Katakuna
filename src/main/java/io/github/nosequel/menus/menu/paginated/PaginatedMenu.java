@@ -1,9 +1,11 @@
 package io.github.nosequel.menus.menu.paginated;
 
 import io.github.nosequel.menus.button.Button;
+import io.github.nosequel.menus.button.impl.ButtonBuilder;
 import io.github.nosequel.menus.menu.Menu;
 import lombok.Getter;
 import lombok.Setter;
+import org.bukkit.entity.Player;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -20,8 +22,13 @@ public abstract class PaginatedMenu extends Menu {
      * @param title the title
      * @param size  the size
      */
-    public PaginatedMenu(String title, int size) {
-        super(title, size + 9);
+    public PaginatedMenu(Player player, String title, int size) {
+        super(player, title, size + 9);
+    }
+
+    @Override
+    public void updateMenu() {
+        this.updateMenu(this.getButtonsInRange());
     }
 
     /**
@@ -32,6 +39,7 @@ public abstract class PaginatedMenu extends Menu {
     public List<Button> getButtonsInRange() {
         return this.getButtons().stream()
                 .filter(button -> button.getIndex() >= getSize() && button.getIndex() <= getSize() * page)
+                .map(button -> new ButtonBuilder(button).setIndex(button.getIndex() + 9).get())
                 .collect(Collectors.toList());
     }
 }
