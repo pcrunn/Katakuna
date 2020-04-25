@@ -1,5 +1,6 @@
 package io.github.nosequel.katukana.menu;
 
+import io.github.nosequel.katukana.MenuHandler;
 import io.github.nosequel.katukana.button.Button;
 import lombok.Getter;
 import lombok.Setter;
@@ -34,6 +35,8 @@ public class Menu {
         this.player = player;
         this.title = title;
         this.size = size;
+
+        MenuHandler.get().getMenus().add(this);
     }
 
     /**
