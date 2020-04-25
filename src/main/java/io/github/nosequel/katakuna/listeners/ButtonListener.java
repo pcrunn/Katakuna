@@ -40,6 +40,7 @@ public class ButtonListener implements Listener {
         final Menu menu = menuHandler.findMenu(player);
 
         if (menu != null) {
+            menu.onClose(event);
             menuHandler.getMenus().remove(menu);
         }
     }

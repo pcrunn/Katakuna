@@ -7,6 +7,7 @@ import lombok.Setter;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
+import org.bukkit.event.inventory.InventoryCloseEvent;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 
@@ -87,4 +88,12 @@ public class Menu {
             inventory.setItem(i, new ItemStack(Material.AIR));
         }
     }
+
+    /**
+     * This method gets called whenever the player closes the inventory
+     *
+     * @param event the close event
+     */
+    public void onClose(InventoryCloseEvent event) { }
+
 }
