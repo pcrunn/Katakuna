@@ -5,6 +5,8 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
+import java.util.Collections;
+import java.util.List;
 import java.util.function.Consumer;
 
 public interface Button {
@@ -21,7 +23,18 @@ public interface Button {
      *
      * @return the display name
      */
-    String getDisplayName();
+    default String getDisplayName() {
+        return this.getMaterial().name();
+    }
+
+    /**
+     * Get the lore of the button
+     *
+     * @return the lore
+     */
+    default List<String> getLore() {
+        return Collections.emptyList();
+    }
 
     /**
      * Get the material of the button

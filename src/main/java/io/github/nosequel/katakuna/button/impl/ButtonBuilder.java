@@ -5,13 +5,18 @@ import lombok.Getter;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.function.Consumer;
 
 @Getter
 public class ButtonBuilder implements Button {
 
-    private Material material;
     private Consumer<Player> action;
+    private List<String> lore = new ArrayList<>();
+
+    private Material material;
     private String displayName;
 
     private int index;
@@ -88,4 +93,17 @@ public class ButtonBuilder implements Button {
 
         return this;
     }
+
+    /**
+     * Set the lore of a Button
+     *
+     * @param lore the lore
+     * @return the current ButtonBuilder instance
+     */
+    public ButtonBuilder setLore(String... lore) {
+        this.lore = new ArrayList<>(Arrays.asList(lore));
+
+        return this;
+    }
+
 }
