@@ -60,6 +60,9 @@ public interface Button {
         final ItemMeta itemMeta = itemStack.getItemMeta();
 
         itemMeta.setDisplayName(this.getDisplayName());
+        itemMeta.setLore(this.getLore());
+
+        itemStack.setItemMeta(itemMeta);
 
         return itemStack;
     }
