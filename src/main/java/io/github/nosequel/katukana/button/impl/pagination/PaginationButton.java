@@ -1,7 +1,7 @@
-package io.github.nosequel.menus.button.impl.pagination;
+package io.github.nosequel.katukana.button.impl.pagination;
 
-import io.github.nosequel.menus.button.Button;
-import io.github.nosequel.menus.menu.paginated.PaginatedMenu;
+import io.github.nosequel.katukana.button.Button;
+import io.github.nosequel.katukana.menu.paginated.PaginatedMenu;
 import lombok.Getter;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;

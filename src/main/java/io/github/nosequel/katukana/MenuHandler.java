@@ -1,4 +1,4 @@
-package io.github.nosequel.menus;
+package io.github.nosequel.katukana;
 
 
 import org.bukkit.plugin.java.JavaPlugin;

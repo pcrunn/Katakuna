@@ -1,10 +1,10 @@
-package io.github.nosequel.menus.menu.paginated;
+package io.github.nosequel.katukana.menu.paginated;
 
-import io.github.nosequel.menus.button.Button;
-import io.github.nosequel.menus.button.impl.ButtonBuilder;
-import io.github.nosequel.menus.button.impl.pagination.PaginationButton;
-import io.github.nosequel.menus.button.impl.pagination.PaginationType;
-import io.github.nosequel.menus.menu.Menu;
+import io.github.nosequel.katukana.button.Button;
+import io.github.nosequel.katukana.button.impl.ButtonBuilder;
+import io.github.nosequel.katukana.button.impl.pagination.PaginationButton;
+import io.github.nosequel.katukana.button.impl.pagination.PaginationType;
+import io.github.nosequel.katukana.menu.Menu;
 import lombok.Getter;
 import lombok.Setter;
 import org.bukkit.entity.Player;

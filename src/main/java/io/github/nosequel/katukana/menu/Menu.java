@@ -1,6 +1,6 @@
-package io.github.nosequel.menus.menu;
+package io.github.nosequel.katukana.menu;
 
-import io.github.nosequel.menus.button.Button;
+import io.github.nosequel.katukana.button.Button;
 import lombok.Getter;
 import lombok.Setter;
 import org.bukkit.Bukkit;

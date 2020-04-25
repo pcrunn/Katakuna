@@ -1,4 +1,4 @@
-package io.github.nosequel.menus.button;
+package io.github.nosequel.katukana.button;
 
 import org.bukkit.Material;
 import org.bukkit.entity.HumanEntity;
