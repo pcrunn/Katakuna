@@ -1,7 +1,7 @@
-package io.github.nosequel.katukana.button;
+package io.github.nosequel.katakuna.button;
 
 import org.bukkit.Material;
-import org.bukkit.entity.HumanEntity;
+import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
@@ -35,7 +35,7 @@ public interface Button {
      *
      * @return the action
      */
-    Consumer<HumanEntity> getAction();
+    Consumer<Player> getAction();
 
     /**
      * Change a Button into an ItemStack

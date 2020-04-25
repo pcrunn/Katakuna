@@ -1,7 +1,7 @@
-package io.github.nosequel.katukana.menu;
+package io.github.nosequel.katakuna.menu;
 
-import io.github.nosequel.katukana.MenuHandler;
-import io.github.nosequel.katukana.button.Button;
+import io.github.nosequel.katakuna.MenuHandler;
+import io.github.nosequel.katakuna.button.Button;
 import lombok.Getter;
 import lombok.Setter;
 import org.bukkit.Bukkit;
@@ -64,7 +64,7 @@ public class Menu {
         final Inventory inventory = this.inventory == null ? Bukkit.createInventory(null, this.getSize(), this.getTitle()) : this.inventory;
 
         this.clearMenu(inventory);
-        buttons.forEach(button -> this.inventory.setItem(button.getIndex(), button.toItemStack()));
+        buttons.forEach(button -> inventory.setItem(button.getIndex(), button.toItemStack()));
 
         if (inventory != this.inventory) {
             this.inventory = inventory;
@@ -84,7 +84,7 @@ public class Menu {
         }
 
         for (int i = 0; i < this.size; i++) {
-            this.inventory.setItem(i, new ItemStack(Material.AIR));
+            inventory.setItem(i, new ItemStack(Material.AIR));
         }
     }
 }

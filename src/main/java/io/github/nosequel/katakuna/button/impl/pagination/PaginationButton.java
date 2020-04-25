@@ -1,11 +1,11 @@
-package io.github.nosequel.katukana.button.impl.pagination;
+package io.github.nosequel.katakuna.button.impl.pagination;
 
-import io.github.nosequel.katukana.button.Button;
-import io.github.nosequel.katukana.menu.paginated.PaginatedMenu;
+import io.github.nosequel.katakuna.button.Button;
+import io.github.nosequel.katakuna.menu.paginated.PaginatedMenu;
 import lombok.Getter;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
-import org.bukkit.entity.HumanEntity;
+import org.bukkit.entity.Player;
 
 import java.util.function.Consumer;
 
@@ -15,7 +15,7 @@ public class PaginationButton implements Button {
     private int index;
     private String displayName;
     private Material material;
-    private Consumer<HumanEntity> action;
+    private Consumer<Player> action;
 
     /**
      * Constructor for creating a new PaginationButton

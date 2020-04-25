@@ -1,9 +1,9 @@
-package io.github.nosequel.katukana.button.impl;
+package io.github.nosequel.katakuna.button.impl;
 
-import io.github.nosequel.katukana.button.Button;
+import io.github.nosequel.katakuna.button.Button;
 import lombok.Getter;
 import org.bukkit.Material;
-import org.bukkit.entity.HumanEntity;
+import org.bukkit.entity.Player;
 
 import java.util.function.Consumer;
 
@@ -11,7 +11,7 @@ import java.util.function.Consumer;
 public class ButtonBuilder implements Button {
 
     private Material material;
-    private Consumer<HumanEntity> action;
+    private Consumer<Player> action;
     private String displayName;
 
     private int index;
@@ -83,7 +83,7 @@ public class ButtonBuilder implements Button {
      * @param action the new index
      * @return the current ButtonBuilder instance
      */
-    public ButtonBuilder setAction(Consumer<HumanEntity> action) {
+    public ButtonBuilder setAction(Consumer<Player> action) {
         this.action = action;
 
         return this;
