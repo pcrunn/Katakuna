@@ -1,12 +1,14 @@
 package io.github.nosequel.katukana.button.impl;
 
 import io.github.nosequel.katukana.button.Button;
+import lombok.Getter;
 import org.bukkit.Material;
 import org.bukkit.entity.HumanEntity;
 
 import java.util.function.Consumer;
 
-public class ButtonBuilder {
+@Getter
+public class ButtonBuilder implements Button {
 
     private Material material;
     private Consumer<HumanEntity> action;
@@ -86,29 +88,4 @@ public class ButtonBuilder {
 
         return this;
     }
-
-    public Button get() {
-        return new Button() {
-            @Override
-            public int getIndex() {
-                return index;
-            }
-
-            @Override
-            public String getDisplayName() {
-                return displayName;
-            }
-
-            @Override
-            public Material getMaterial() {
-                return material;
-            }
-
-            @Override
-            public Consumer<HumanEntity> getAction() {
-                return action;
-            }
-        };
-    }
-
 }

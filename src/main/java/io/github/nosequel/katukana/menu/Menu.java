@@ -64,7 +64,7 @@ public class Menu {
         final Inventory inventory = this.inventory == null ? Bukkit.createInventory(null, this.getSize(), this.getTitle()) : this.inventory;
 
         this.clearMenu(inventory);
-        buttons.forEach(button -> this.inventory.setItem(button.getIndex(), new ItemStack(button.getMaterial())));
+        buttons.forEach(button -> this.inventory.setItem(button.getIndex(), button.toItemStack()));
 
         if (inventory != this.inventory) {
             this.inventory = inventory;

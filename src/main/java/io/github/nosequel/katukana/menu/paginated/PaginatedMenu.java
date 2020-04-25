@@ -51,7 +51,7 @@ public class PaginatedMenu extends Menu {
     public List<Button> getButtonsInRange() {
         return this.getButtons().stream()
                 .filter(button -> button.getIndex() >= getSize() && button.getIndex() <= getSize() * page)
-                .map(button -> new ButtonBuilder(button).setIndex(button.getIndex() + 9).get())
+                .map(button -> new ButtonBuilder(button).setIndex(button.getIndex() + 9))
                 .collect(Collectors.toList());
     }
 }

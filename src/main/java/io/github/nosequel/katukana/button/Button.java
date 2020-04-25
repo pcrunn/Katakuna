@@ -2,6 +2,8 @@ package io.github.nosequel.katukana.button;
 
 import org.bukkit.Material;
 import org.bukkit.entity.HumanEntity;
+import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.ItemMeta;
 
 import java.util.function.Consumer;
 
@@ -35,4 +37,17 @@ public interface Button {
      */
     Consumer<HumanEntity> getAction();
 
+    /**
+     * Change a Button into an ItemStack
+     *
+     * @return the item stack
+     */
+    default ItemStack toItemStack() {
+        final ItemStack itemStack = new ItemStack(this.getMaterial());
+        final ItemMeta itemMeta = itemStack.getItemMeta();
+
+        itemMeta.setDisplayName(this.getDisplayName());
+
+        return itemStack;
+    }
 }
