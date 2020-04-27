@@ -37,6 +37,12 @@ public class Menu {
         this.title = title;
         this.size = size;
 
+        final Menu oldMenu = MenuHandler.get().findMenu(player);
+
+        if (oldMenu != null) {
+            MenuHandler.get().getMenus().remove(oldMenu);
+        }
+
         MenuHandler.get().getMenus().add(this);
     }
 
@@ -94,6 +100,7 @@ public class Menu {
      *
      * @param event the close event
      */
-    public void onClose(InventoryCloseEvent event) { }
+    public void onClose(InventoryCloseEvent event) {
+    }
 
 }
