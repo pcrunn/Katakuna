@@ -118,7 +118,6 @@ public class ButtonBuilder implements Button {
         this.data = data;
 
         return this;
-
     }
 
 }
