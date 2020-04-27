@@ -4,6 +4,7 @@ import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
+import org.bukkit.material.MaterialData;
 
 import java.util.Collections;
 import java.util.List;
@@ -44,6 +45,13 @@ public interface Button {
     Material getMaterial();
 
     /**
+     * Get the data of the button
+     *
+     * @return the data
+     */
+    byte getData();
+
+    /**
      * Get the action which will be executed upon click
      *
      * @return the action
@@ -59,6 +67,7 @@ public interface Button {
         final ItemStack itemStack = new ItemStack(this.getMaterial());
         final ItemMeta itemMeta = itemStack.getItemMeta();
 
+        itemStack.getData().setData(this.getData());
         itemMeta.setDisplayName(this.getDisplayName());
         itemMeta.setLore(this.getLore());
 
